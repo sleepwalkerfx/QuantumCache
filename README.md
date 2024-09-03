@@ -214,7 +214,7 @@ if let cachedDataItem = cache.get(2) {
 Here's how you can define and use a `QuantumCache` with an enum that has generic associated values:
 
 ```swift
-// Define the enum with generic associated values conforming to `CachableContent` and `Hashable`
+// Define the enum with generic associated values conforming to `CachableContent`
 enum GenericEnumContent<T>: CachableContent {
     case integer(id: Int, value: Int)
     case string(id: Int, value: String)
