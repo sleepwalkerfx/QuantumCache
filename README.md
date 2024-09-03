@@ -1,6 +1,6 @@
 # QuantumCache
 
-**QuantumCache** is a high-performance Least Recently Used (LRU) cache implementation in Swift. It is designed to be fast and efficient, supporting various types of cached content, including complex types and enums with generic associated values.
+**QuantumCache** is a thread-safe, high-performance Least Recently Used (LRU) cache implementation in Swift. It is designed to be fast and efficient, supporting various types of cached content, including complex types and enums with generic associated values.
 
 ## Features
 
