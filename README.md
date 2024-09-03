@@ -18,7 +18,9 @@
 While `NSCache` is a powerful and convenient caching solution in Swift, `QuantumCache` offers several advantages:
 
 - **Support for Value Types**: Unlike `NSCache`, which primarily works with reference types, `QuantumCache` can efficiently cache value types (e.g., structs, enums) in addition to reference types. This makes it more versatile and suitable for a broader range of use cases.
-  
+
+- **No NSObject Subclass Required**: Unlike `NSCache`, which requires cached objects to be subclasses of `NSObject`, `QuantumCache` does not impose such a restriction. This allows you to use plain Swift structs, enums, and classes. Using plain Swift types can be more efficient and align better with Swift’s value semantics, avoiding the overhead associated with `NSObject` subclassing.
+
 - **Deterministic Eviction Policy**: `QuantumCache` follows a strict Least Recently Used (LRU) eviction policy. This deterministic approach ensures that the oldest unused item is always removed first when the cache exceeds its capacity. `NSCache`, on the other hand, may not strictly adhere to LRU, as its eviction policy is based on internal heuristics and system memory pressure.
   
 - **Thread Safety**: `QuantumCache` uses `NSRecursiveLock` to ensure thread-safe operations across multiple threads. While `NSCache` is also thread-safe, `QuantumCache`'s locking mechanism is transparent and designed to handle more complex access patterns, such as nested locking scenarios.
