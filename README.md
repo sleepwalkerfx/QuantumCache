@@ -215,7 +215,7 @@ Here's how you can define and use a `QuantumCache` with an enum that has generic
 
 ```swift
 // Define the enum with generic associated values conforming to `CachableContent` and `Hashable`
-enum GenericEnumContent<T>: CachableContent, Hashable where T: Hashable {
+enum GenericEnumContent<T>: CachableContent {
     case integer(id: Int, value: Int)
     case string(id: Int, value: String)
     case generic(id: Int, value: T)
@@ -244,17 +244,17 @@ enum GenericEnumContent<T>: CachableContent, Hashable where T: Hashable {
     }
 }
 
-// Create a QuantumCache instance with a specified capacity
-let cache = QuantumCache<GenericEnumContent<String>>(capacity: 5)
+// Create a QuantumCache instance with a custom type for the associated type of .generic case
+let cache = QuantumCache<GenericEnumContent<Data>>(capacity: 5)
 
 // Put items into the cache
-let intItem = GenericEnumContent.integer(id: 1, value: 42)
+let intItem: GenericEnumContent<Data> = GenericEnumContent.integer(id: 1, value: 42)
 cache.put(intItem)
 
-let stringItem = GenericEnumContent.string(id: 2, value: "Hello, Swift!")
+let stringItem: GenericEnumContent<Data> = GenericEnumContent.string(id: 2, value: "Hello, Swift!")
 cache.put(stringItem)
 
-let genericItem = GenericEnumContent.generic(id: 3, value: "Generic Value")
+let genericItem = GenericEnumContent.generic(id: 3, value: Data([0x00, 0x01]))
 cache.put(genericItem)
 
 // Access items from the cache
