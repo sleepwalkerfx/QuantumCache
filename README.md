@@ -136,7 +136,7 @@ if let cachedThirdItem = cache.get(3) {
 if let cachedFourthItem = cache.get(4) {
     print("Retrieved cached fourth item: \(cachedFourthItem.content)")
 }
-
+```
 
 ### 2. Enums with Associated Values
 
@@ -197,7 +197,7 @@ if let cachedDataItem = cache.get(2) {
 // Example output:
 // Retrieved cached text: text(id: 1, content: "Hello, World!")
 // Retrieved cached data: data(id: 2, content: 3 bytes)
-
+```
 
 ### 3. Enums with Generic Associated Types
 
@@ -272,7 +272,7 @@ if let cachedGenericItem = cache.get(3) {
 // Retrieved cached integer: integer(id: 1, value: 42)
 // Retrieved cached string: string(id: 2, value: "Hello, Swift!")
 // Retrieved cached generic value: generic(id: 3, value: "Generic Value")
-
+```
 
 ## Running Tests
 
