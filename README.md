@@ -273,7 +273,7 @@ if let cachedGenericItem = cache.get(3) {
 // Example output:
 // Retrieved cached integer: integer(id: 1, value: 42)
 // Retrieved cached string: string(id: 2, value: "Hello, Swift!")
-// Retrieved cached generic value: generic(id: 3, value: "Generic Value")
+// Retrieved cached generic value: generic(id: 3, value: 2 bytes)
 ```
 
 ## Running Tests
